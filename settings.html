@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>النظام الذكي | الإعدادات</title>
+    <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="Dashboard.css">
+</head>
+<body>
+
+    <aside class="sidebar">
+        <div class="sidebar-brand">
+            <img src="Logo.jpg" alt="Logo">
+            <h2>لوحة الإدارة</h2>
+        </div>
+        <ul class="nav-menu">
+            <a href="index.html" class="nav-link">
+                <li class="nav-item"><i class="fas fa-home"></i> <span>الرئيسية</span></li>
+            </a>
+            <a href="Dashboard.html" class="nav-link">
+                <li class="nav-item"><i class="fas fa-th-large"></i> <span>الداشبورد</span></li>
+            </a>
+            <a href="Settings.html" class="nav-link">
+                <li class="nav-item active"><i class="fas fa-cog"></i> <span>الإعدادات</span></li>
+            </a>
+        </ul>
+    </aside>
+
+    <main class="main-container">
+        <div class="header-top">
+            <h1>إعدادات النظام</h1>
+            <div style="background: white; padding: 10px 20px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.03); color: var(--sidebar-color);">
+                <i class="fas fa-user-shield"></i> لوحة المشرفين
+            </div>
+        </div>
+
+        <div class="settings-grid">
+            <div class="settings-card">
+                <h3><i class="fas fa-user-plus"></i> إضافة مستخدم</h3>
+                <p class="subtitle">إضافة مشرف جديد للوصول للوحة التحكم</p>
+                <form>
+                    <div class="form-group">
+                        <label>الاسم الكامل</label>
+                        <input type="text" placeholder="الاسم هنا">
+                    </div>
+                    <div class="form-group">
+                        <label>البريد الإلكتروني</label>
+                        <input type="email" placeholder="email@kfmc.sa">
+                    </div>
+                    <div class="form-group">
+                        <label>كلمة المرور</label>
+                        <input type="password" placeholder="••••••••">
+                    </div>
+                    <div class="form-group">
+                        <label>الصلاحية</label>
+                        <select>
+                            <option>مدير كامل الصلاحيات</option>
+                            <option>مشاهدة فقط</option>
+                        </select>
+                    </div>
+                    <button type="button" class="save-btn">حفظ البيانات</button>
+                </form>
+            </div>
+
+            <div class="settings-card">
+                <h3><i class="fas fa-users-cog"></i> المستخدمين الحاليين</h3>
+                <p class="subtitle">إدارة صلاحيات الوصول</p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>المستخدم</th>
+                            <th>الصلاحية</th>
+                            <th>حذف</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="user-mini">
+                                    <div class="avatar">M</div>
+                                    <div><strong>محمد علي</strong><br><small>admin@kfmc.sa</small></div>
+                                </div>
+                            </td>
+                            <td><span class="role-badge admin">مدير</span></td>
+                            <td><button class="del-btn"><i class="fas fa-trash"></i></button></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="user-mini">
+                                    <div class="avatar" style="background:#ff9f43">S</div>
+                                    <div><strong>سارة أحمد</strong><br><small>sara@kfmc.sa</small></div>
+                                </div>
+                            </td>
+                            <td><span class="role-badge viewer">مشاهدة</span></td>
+                            <td><button class="del-btn"><i class="fas fa-trash"></i></button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>

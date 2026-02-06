@@ -1,0 +1,106 @@
+/* --- إعدادات الصفحة الأساسية --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Almarai', sans-serif;
+}
+
+body {
+    background-color: #fcfdfe;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* --- (تم حذف أكواد الهيدر والناف بار من هنا لتوحيد الشكل) --- */
+
+/* --- Hero Section --- */
+.hero-section {
+    background: linear-gradient(rgba(7, 45, 75, 0.9), rgba(11, 95, 179, 0.8)), url('KFMC.jpg') center/cover;
+    padding: 100px 20px;
+    text-align: center;
+    color: white;
+    clip-path: ellipse(150% 100% at 50% 0%);
+    margin-bottom: 40px;
+}
+
+.hero-section h1 { font-size: 36px; font-weight: 800; margin-bottom: 15px; }
+.hero-section p { font-size: 18px; opacity: 0.9; }
+
+/* --- معرض البرامج --- */
+.programs-container {
+    padding: 40px 10%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    min-height: 50vh;
+}
+
+.course-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: 1px solid #f0f0f0;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.course-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+.card-header {
+    padding: 30px;
+    text-align: center;
+    color: white;
+}
+
+.card-header i { font-size: 45px; margin-bottom: 15px; }
+.card-header h2 { font-size: 22px; font-weight: 800; }
+
+.card-body { padding: 30px; text-align: right; flex-grow: 1; }
+.card-body h3 { margin-bottom: 15px; color: #072d4b; font-size: 18px; }
+.card-body p { color: #666; font-size: 14px; margin-bottom: 25px; line-height: 1.8; }
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    background: #fafbfc;
+    border-top: 1px solid #f0f0f0;
+}
+
+.duration { font-weight: 700; font-size: 14px; color: #555; display: flex; align-items: center; gap: 5px; }
+.duration i { color: #0b5fb3; }
+
+.btn-register {
+    text-decoration: none;
+    background: #0b5fb3;
+    color: white;
+    padding: 10px 25px;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.btn-register:hover { background: #072d4b; }
+
+/* ألوان التخصصات */
+.tech-bg { background: linear-gradient(45deg, #0b3c5d, #1e3c72); }
+.health-bg { background: linear-gradient(45deg, #0ca678, #2fb344); }
+.quality-bg { background: linear-gradient(45deg, #d4a017, #f39c12); }
+
+/* --- الفوتر --- */
+footer {
+    background: #0b3c5d;
+    color: white;
+    padding: 40px;
+    text-align: center;
+    margin-top: 50px;
+}

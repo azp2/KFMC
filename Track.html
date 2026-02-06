@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Track.css">
+    <link rel="stylesheet" href="styles.css"/>
+        <link rel="icon" href="Logo1.webp">
+
+    <title>متابعة حالة الطلب | التجمع الصحي الثاني</title>
+    <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+</head>
+<body>
+
+   <header>
+    <a href="index.html" class="logo-section">
+        <img src="Logo.jpg" alt="شعار التجمع" class="logo-img">
+        <div class="logo-text">
+            <h2>التجمع الصحي الثاني</h2>
+            <span>Second Health Cluster</span>
+        </div>
+    </a>
+
+    <a href="Login.html" class="staff-login-btn">
+        <i class="fas fa-user-lock"></i>
+        <span>دخول الموظفين</span>
+    </a>
+</header>
+
+<nav>
+    <div class="nav-bar">
+        <a href="index.html" class="nav-link">الرئيسية</a>
+        <a href="RegistrationSteps.html" class="nav-link">خطوات التسجيل</a>
+        <a href="ShortPrograms.html" class="nav-link">البرامج القصيرة</a>
+        <a href="Apply.html" class="nav-link">الحلقات التطبيقية</a>
+        <a href="Track.html" class="nav-link">متابعة الطلب</a>
+        <a href="ContactUs.html" class="nav-link">تواصل معنا</a>
+    </div>
+</nav>
+    <main class="track-container">
+        <div class="track-card">
+            <div class="icon-header"><i class="fas fa-id-card-alt"></i></div>
+            <h1>استعلام عن حالة الطلب</h1>
+            <p class="subtitle">أدخل رقم الهوية الوطنية المكون من 10 أرقام لمتابعة طلبك</p>
+
+            <div class="input-group">
+                <input type="text" id="idInput" placeholder="1XXXXXXXXX" maxlength="10">
+            </div>
+
+            <button class="button" onclick="checkApplication()">
+                <span class="edge"></span>
+                <span class="front">استعلام الآن <i class="fas fa-search" style="margin-right: 10px;"></i></span>
+            </button>
+
+            <div id="resultArea">
+                <div class="status-box">
+                    <i id="statusIcon"></i>
+                    <h2 id="statusTitle" style="margin-bottom: 5px;"></h2>
+                    <p id="statusMessage" style="font-size: 13px;"></p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        &copy; 2026 مدينة الملك فهد الطبية - جميع الحقوق محفوظة
+    </footer>
+
+    <script>
+        function checkApplication() {
+            const idValue = document.getElementById('idInput').value;
+            const resArea = document.getElementById('resultArea');
+            const sIcon = document.getElementById('statusIcon');
+            const sTitle = document.getElementById('statusTitle');
+            const sMsg = document.getElementById('statusMessage');
+
+            if(idValue.length < 10) {
+                alert("يرجى إدخال رقم هوية صحيح");
+                return;
+            }
+
+            resArea.style.display = "block";
+
+            // محاكاة المنطق (سيتم ربطه بالداتابيز لاحقاً)
+            if(idValue === "1111111111") {
+                resArea.className = "accepted";
+                sIcon.className = "fas fa-check-circle";
+                sTitle.innerText = "تم القبول";
+                sMsg.innerText = "تهانينا! نرجو مراجعة بريدك الإلكتروني للحصول على تفاصيل المباشرة.";
+            } 
+            else if(idValue === "2222222222") {
+                resArea.className = "rejected";
+                sIcon.className = "fas fa-times-circle";
+                sTitle.innerText = "نعتذر منك";
+                sMsg.innerText = "لم يتم قبول طلبك لهذه الفترة نظراً للاكتفاء، نتمنى لك التوفيق.";
+            }
+            else {
+                resArea.className = "pending";
+                sIcon.className = "fas fa-clock";
+                sTitle.innerText = "قيد المراجعة";
+                sMsg.innerText = "طلبك لا يزال تحت التدقيق من قبل لجنة القبول، يرجى التحقق لاحقاً.";
+            }
+        }
+    </script>
+</body>
+</html>

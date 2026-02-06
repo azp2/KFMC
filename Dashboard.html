@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>النظام الذكي | لوحة المعلومات</title>
+    <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="Dashboard.css">
+</head>
+<body>
+
+    <aside class="sidebar">
+        <div class="sidebar-brand">
+            <img src="Logo.jpg" alt="Logo">
+            <h2>لوحة الإدارة</h2>
+        </div>
+        <ul class="nav-menu">
+            <a href="index.html" class="nav-link">
+                <li class="nav-item"><i class="fas fa-home"></i> <span>الرئيسية</span></li>
+            </a>
+            <a href="Dashboard.html" class="nav-link">
+                <li class="nav-item active"><i class="fas fa-th-large"></i> <span>الداشبورد</span></li>
+            </a>
+            <a href="Settings.html" class="nav-link">
+                <li class="nav-item"><i class="fas fa-cog"></i> <span>الإعدادات</span></li>
+            </a>
+        </ul>
+    </aside>
+
+    <main class="main-container">
+        <div class="header-top">
+            <h1>إدارة المتقدمين</h1>
+            <div style="background: white; padding: 10px 20px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.03); color: var(--sidebar-color);">
+                <i class="fas fa-calendar-alt"></i> 2026/02/04
+            </div>
+        </div>
+
+        <div class="stats-wrapper">
+            <div class="stat-card">
+                <div class="stat-icon blue-icon"><i class="fas fa-file-alt"></i></div>
+                <div><h3>1,284</h3><p style="margin:0; font-size:12px; color:#aaa;">إجمالي الطلبات</p></div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon green-icon"><i class="fas fa-user-check"></i></div>
+                <div><h3>856</h3><p style="margin:0; font-size:12px; color:#aaa;">تم قبولهم</p></div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon orange-icon"><i class="fas fa-clock"></i></div>
+                <div><h3>42</h3><p style="margin:0; font-size:12px; color:#aaa;">تحت المراجعة</p></div>
+            </div>
+        </div>
+
+        <div class="data-section">
+            <h3 style="margin-bottom: 25px; color: var(--sidebar-color);">آخر الطلبات الواردة</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>المتقدم</th>
+                        <th>التخصص</th>
+                        <th>الحالة</th>
+                        <th>العمليات</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <div class="user-info">
+                                <img src="https://ui-avatars.com/api/?name=Saleh+Otaibi&background=random" alt="">
+                                <div><span>صالح بن محمد العتيبي</span><br><small style="color:#aaa;">جامعة الملك سعود</small></div>
+                            </div>
+                        </td>
+                        <td>نظم معلومات إدارية</td>
+                        <td><span class="badge badge-wait">قيد المراجعة</span></td>
+                        <td>
+                            <button class="action-btn view-btn"><i class="fas fa-eye"></i></button>
+                            <button class="action-btn approve-btn"><i class="fas fa-check"></i></button>
+                            <button class="action-btn reject-btn"><i class="fas fa-times"></i></button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+</body>
+</html>
